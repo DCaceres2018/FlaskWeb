@@ -1,0 +1,361 @@
+/* Resetear estilos por defecto del navegador */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para centrar el formulario en la pantalla */
+.center-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ajusta el ancho al 100% de la pantalla */
+    height: 57vh; /* Ajusta la altura al 100% de la pantalla */
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+    text-align: center;
+}
+
+
+/* Estilos para el contenedor del icono de usuario */
+#user-icon {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según sea necesario */
+    right: 10px; /* Ajusta la posición horizontal según sea necesario */
+}
+
+/* Estilos para la imagen del icono de usuario */
+#user-icon img {
+    width: 60px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    border-radius: 50%; /* Si deseas un efecto de borde redondeado para el icono */
+    border: 2px solid white; /* Agrega un borde blanco de 2px alrededor del icono */
+
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    position: relative;
+}
+
+/* Estilos para el contenedor del título */
+.title {
+    text-align: center;
+}
+
+/* Estilos para el contenedor del desplegable */
+.dropdown-container {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según sea necesario */
+    right: 10px; /* Ajusta la posición horizontal según sea necesario */
+}
+
+/* Estilos para el botón del desplegable (icono de usuario) */
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para el icono de usuario en el botón */
+.dropbtn img {
+    width: 60px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    border-radius: 35%; /* Si deseas un efecto de borde redondeado para el icono */
+
+}
+
+/* Estilos para el contenido del desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Alinea el contenido a la derecha */
+}
+
+/* Estilos para los enlaces dentro del desplegable */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+/* Cambia el color del enlace cuando se pasa el ratón por encima */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Muestra el desplegable cuando el usuario pasa el ratón por encima del botón */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*mensajes de error*/
+.error-message {
+    color: red; /* Cambia el color del texto a rojo */
+    margin-top: 10px; /* Añade espacio entre el formulario y el mensaje de error */
+}
+/* Estilos para el desplegable de inicio de sesión */
+.user-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Estilos para el desplegable de inicio de sesión */
+.login-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* Estilo para la imagen circular */
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+ /* Estilos para el cuadro */
+.circular-image-container {
+    width: 150px; /* Establece el ancho y alto deseado para el contenedor de la imagen circular */
+    height: 150px;
+    overflow: hidden; /* Oculta las partes de la imagen que están fuera del contenedor circular */
+    border-radius: 50%; /* Crea un contenedor circular */
+}
+
+.circular-image-container img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen dentro del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+}
+
+.centered-button-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+
+.centered-button {
+    padding: 10px 20px; /* Ajusta el espaciado interior del botón según tus preferencias */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    /* Añade más estilos según tus necesidades */
+}
+div.w-33 {
+  width: 50%;
+}
+
+div.center {
+  text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+section.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* Cambio a dirección vertical */
+    margin-top: 20px;
+}
+
+.social-link {
+    text-align: center;
+    margin: 10px 0; /* Añadimos margen vertical para separar las imágenes */
+}
+
+.social-links a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.social-links img {
+    max-width: 25%;
+    min-width: 20%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para el botón "Volver" */
+.return-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.buttonSubmit,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttonSubmit:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* SECCION DE PROFILE*/
+
+/* Estilos para el fondo de la página */
+
+
+        /* Estilos para centrar el cuadro en la página */
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+        /* Estilo para la imagen circular */
+.profile-image {
+            border-radius: 20%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px; /* Añade bordes redondeados de 10px */
+            margin-bottom: 20px;
+            margin: 0 auto; /* Centra la imagen horizontalmente en el cuadro */
+        }
+.profile-box {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+}
+#new_profile_image {
+    display: none;
+}
+.upload-text {
+    margin-right: 10px;
+}
+.custom-file-upload {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.logo {
+    margin: 0;
+    font-size: 36px;
+}
+.button-separator {
+    margin-top: 20px; /* Añade un espacio vertical de 20px */
+}
+/* FIN SECCION PROFILE*/

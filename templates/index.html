@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Web de Idiomas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Tu Web de Idiomas</h1>
+    </header>
+    <nav>
+        <!-- Desplegable solo si el inicio de sesión fue exitoso -->
+        {% if login_successful %}
+        <div class="dropdown user-dropdown">
+            <button class="dropbtn">
+                 <img src="{{ url_for('static', filename=profile_image) }}" alt="Imagen de Usuario">
+            </button>
+            <div class="dropdown-content">
+                <a href="profile">Mi Perfil</a>
+                <a href="logout">LogOut</a>
+            </div>
+        </div>
+        <nav>
+
+        <ul>
+            <li><a href="/index">Inicio</a></li>
+            <li><a href="/reto">Reto</a></li>
+            <li><a href="/estadisticas">Estadísticas</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/extra">Tu</a></li>
+        </ul>
+
+
+        </nav>
+        {% else %}
+        <div class="dropdown login-dropdown">
+            <button class="dropbtn">
+                <img src="{{ url_for('static', filename='user-icon.png') }}" alt="Icono de Usuario">
+            </button>
+            <div class="dropdown-content">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </div>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="/index">Inicio</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+    </nav>
+        {% endif %}
+    </nav>
+
+
+    <section>
+        <h2>Últimas Noticias</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+        <!-- Agrega más contenido aquí -->
+    </section>
+
+    <section>
+        <h2>Nuestros Idiomas</h2>
+        <ul>
+            <li>Inglés</li>
+            <li>Español</li>
+            <li>Alemán</li>
+            <!-- Agrega más idiomas aquí -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tu Web de Idiomas</p>
+    </footer>
+</body>
+</html>

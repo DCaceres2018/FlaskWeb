@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <section>
+        <form class="center-form" action="/login" method="post">
+            <div id="error-message" class="error-message">
+                {{ error_message }} <!-- Esto inserta el mensaje de error dinámicamente desde Flask -->
+            </div>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" class="buttonSubmit" value="Iniciar Sesión">
+
+
+        </form>
+        <div class="return-button">
+            <a href="index" class="button">Volver</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tu Web de Idiomas</p>
+    </footer>
+</body>
+</html>

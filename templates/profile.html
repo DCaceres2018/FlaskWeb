@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ... (otros encabezados) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <form action="/index">
+            <h1 class="logo">WEB</h1>
+        </form>
+    </header>
+
+    <div class="center-box">
+        <!-- Cuadro que contiene la imagen y el formulario -->
+        <div class="profile-box">
+            <!-- Imagen actual del usuario -->
+            <img class="profile-image" src="{{ url_for('static', filename=profile_image) }}" alt="Imagen de Usuario" width="200">
+            <div class="button-separator"></div>
+            <!-- Formulario para cargar una nueva imagen de perfil -->
+            <form action="/upload_profile_image" method="POST" enctype="multipart/form-data">
+                <label for="new_profile_image" class="custom-file-upload">
+                    <span class="upload-text">Seleccionar nueva foto</span>
+                    <input type="file" id="new_profile_image" name="new_profile_image" accept="image/*">
+                </label>
+                <div class="button-separator"></div>
+                <button class="button" type="submit">Cambiar Foto</button>
+            </form>
+
+            <div class="return-button">
+                <a href="index" class="button">Volver</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Tu Web de Idiomas</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Web de Idiomas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Tu Web de Idiomas</h1>
+    </header>
+    <nav>
+        <!-- Desplegable solo si el inicio de sesión fue exitoso -->
+        {% if login_successful %}
+        <div class="dropdown user-dropdown">
+            <button class="dropbtn">
+                <img src="{{ url_for('static', filename=profile_image) }}" alt="Imagen de Usuario">
+            </button>
+            <div class="dropdown-content">
+                <a href="profile">Mi Perfil</a>
+                <a href="logout">LogOut</a>
+            </div>
+        </div>
+        {% else %}
+        <div class="dropdown login-dropdown">
+            <button class="dropbtn">
+                <img src="{{ url_for('static', filename='user-icon.png') }}" alt="Icono de Usuario">
+            </button>
+            <div class="dropdown-content">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </div>
+        </div>
+        {% endif %}
+        <ul>
+            <li><a href="/index">Inicio</a></li>
+            <li><a href="/Reto">Reto</a></li>
+            <li><a href="/estadisticas">Estadísticas</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/extra">Tu</a></li>
+        </ul>
+    </nav>
+
+    <!-- Opciones de Reto -->
+    <section>
+        <center>
+            <h2>Opciones de Reto</h2>
+        </center>
+
+        <div class="return-button">
+            <a href="/reto/opcion1" class="button">Fácil</a>
+        </div>
+        <div class="return-button">
+            <a href="/reto/medio" class="button">Medio</a>
+        </div>
+        <div class="return-button">
+            <a href="/reto/dificil" class="button">Difícil</a>
+        </div>
+        <div class="return-button">
+            <a href="index" class="button">Volver</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tu Web de Idiomas</p>
+    </footer>
+</body>
+</html>
